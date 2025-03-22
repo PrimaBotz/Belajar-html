@@ -3,16 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar HTML dasar</title>
-    <link rel="stylesheet" href="index.css">
+    <title>AI Prima Sederhana</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            background-color: #f4f4f4;
+            padding: 10px;
+            width: 300px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 15px;
+            width: 300px;
+            border: 1px solid #ccc;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 8px 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
+    <div style="text-align: center;">
+    <h1>Selamat Datang di AI Prima</h1>
+    <p>Nama saya: <strong>Ikadek Dwi Adi Primananda</strong><br>
+    Kelas: X-PPLG<br>
+    Nomor Absen: 4</p>
 
-    <h1>Hai Semuaa</h1>
-    <p>Nama saya:  ikadek dwi adi primananda<br>Kelas:  X-PPLG<br>Nomor absen: 4</p>
+    <h2>Materi Belajar</h2>
+    <p>Kita belajar dasar-dasar HTML mulai dari mengenal sintaks dan merancang suatu kode.</p>
 
-    <h2>Belajar</h2>
-    <p>Belajar dasar dasar html mulai dari mengenal sintaks dan merancang suatu kode.</p>
+    <h2>Daftar Materi</h2>
+    <ul>
+        <li>Pengenalan HTML</li>
+        <li>Membuat List</li>
+        <li>Membuat Tabel</li>
+        <li>Membuat Formulir</li>
+    </ul>
+
+    <h2>Jadwal Belajar AI Prima</h2>
+    <table>
+        <tr>
+            <th>Hari</th>
+            <th>Mata Pelajaran</th>
+            <th>Waktu</th>
+        </tr>
+        <tr>
+            <td>Senin</td>
+            <td>HTML Dasar</td>
+            <td>08.00 - 10.00</td>
+        </tr>
+        <tr>
+            <td>Rabu</td>
+            <td>CSS Dasar</td>
+            <td>10.00 - 12.00</td>
+        </tr>
+        <tr>
+            <td>Jumat</td>
+            <td>JavaScript Dasar</td>
+            <td>13.00 - 15.00</td>
+        </tr>
+    </table>
+</div>
+
+    <h2>Formulir Pendaftaran</h2>
+    <form onsubmit="return kirimForm()">
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <input type="submit" value="Daftar">
+    </form>
+
+    <script>
+        function kirimForm() {
+            const nama = document.getElementById('nama').value;
+            const email = document.getElementById('email').value;
+
+            if (nama && email) {
+                alert("Terima kasih " + nama + "! Pendaftaran dengan email " + email + " berhasil.");
+                return true; 
+            } else {
+                alert("Mohon lengkapi semua data!");
+                return false;
+            }
+        }
+    </script>
 
 </body>
 </html>
